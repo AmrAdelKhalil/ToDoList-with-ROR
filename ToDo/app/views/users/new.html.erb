@@ -4,11 +4,11 @@
         <title>Registration Page</title>
         <%= stylesheet_link_tag('application', :media =>'all') %>
     <body>
-        
+        <%=link_to("Home",{:controller => "home",:action => "welcome"}, {:class => "logout"})%>
         <div class = "regForm">
             <%= form_for(:user, :url =>{:action => 'create'})do |f| %>
             
-            <table>
+            <table id="rtable">
             
                 <tr>
                     <th>

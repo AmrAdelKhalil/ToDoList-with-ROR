@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     end
     
    def index
+       redirect_to(:action =>"login")
    end
 
    def show
