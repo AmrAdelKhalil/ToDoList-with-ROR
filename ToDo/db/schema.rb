@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160205213343) do
+ActiveRecord::Schema.define(version: 20160209223905) do
+
+  create_table "notes", force: :cascade do |t|
+    t.integer  "user_id",    limit: 4
+    t.string   "note",       limit: 50, default: ""
+    t.boolean  "is_done",               default: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
+  end
+
+  add_index "notes", ["user_id"], name: "index_notes_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",  limit: 50, default: ""
