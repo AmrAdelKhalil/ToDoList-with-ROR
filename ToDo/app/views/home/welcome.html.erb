@@ -12,7 +12,8 @@
 <!--            <input type="button" value="Register Now" name="register" >-->
             <%=link_to("Register",{:controller => 'users',:action => 'new'}, {:class => "register"}) %>
             <br>
-            <input type="button" value="already have account, login now" name="login">
+<!--            <input type="button" value="already have account, login now" name="login">-->
+            <%= link_to("already have account, login now",{:controller =>'users',:action => 'login'}, {:class =>"login"}) %>
             
         </div>
     </body>

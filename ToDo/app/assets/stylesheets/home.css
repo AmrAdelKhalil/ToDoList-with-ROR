@@ -17,6 +17,7 @@ body{
     color: aliceblue;
     text-align: center;
     font-size: 30px;
+/*    position: relative;*/
 }
 #Main h1{
     font-family: "Comic Sans MS", cursive, sans-serif;
@@ -51,17 +52,20 @@ body{
     transition-duration: 1s;
     color: #ffffff;
 }
-#Main input[name="login"]{
+.login{
     background-color: transparent;
     font-size: 21px;
-    margin-top: 20px;
+/*    margin-top: 400px;*/
+    top:110%;
+    left:35%;
     border: none;
     text-decoration: underline;
     font-family: serif;
     color: #008CBA;
-/*    position: relative;*/
+    text-decoration: none;
+    position: absolute;
 }
-#Main input[name="login"]:hover{
+.login:hover{
     color: #ffffff;
     transition-duration: 1s;
     text-decoration: underline;

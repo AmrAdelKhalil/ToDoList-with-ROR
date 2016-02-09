@@ -1,2 +1,37 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title><%=@user.first_name%>'s Page</title>
+        <%= stylesheet_link_tag('application', :media =>'all') %>
+    </head>
+    
+    <body>
+        
+        <div class = "Name">
+            <h1><%=@user.first_name%> <%=@user.second_name%></h1>
+            <%=link_to("Logout",{:action => "login"}, {:class => "logout"})%>
+        </div>
+        
+        <div class="List">
+            
+            <table>
+                <tr>
+                    <th>My ToDo List</th>
+                </tr>
+                
+                <tr>
+                    <td>here is the content</td>
+                    <td>
+                        <form>
+                            <input type="radio"/>Done
+                        </form>
+                    </td>
+                </tr>
+                
+            </table>
+        
+        </div>
+    </body>
+</html>

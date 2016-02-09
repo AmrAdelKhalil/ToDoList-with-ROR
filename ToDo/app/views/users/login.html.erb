@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Login Page</title>
+        <%= stylesheet_link_tag('application', :media =>'all') %>
+    </head>
+    
+    <body>
+        <div class = "loginForm">
+            <%= form_for(:user, :url =>{:action => 'show'})do |f| %>
+            
+            <table>
+                
+                <tr>
+                    <th>
+                        Email:
+                    </th>
+                    <td><%=f.text_field(:email) %>                    
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        Passowrd:
+                    </th>
+                    <td><%=f.text_field(:password) %>                    
+                    </td>
+                </tr>
+            
+            </table>
+                
+            <div class="btnSubmit">
+                <%= submit_tag("Login") %>
+            </div>
+            
+            <% end %>
+        </div>
+    
+    </body>
+</html>
