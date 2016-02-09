@@ -25,7 +25,7 @@ class UsersController < ApplicationController
         @user = User.new(user_pram)
         
         if @user.save
-            redirect_to(:action =>'index')
+            render(:action =>'show')
         else
             render('new')
         end

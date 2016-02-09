@@ -45,7 +45,7 @@
 .List table{
     padding: 10px;   
 }
-table,  td {
+.List table td {
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -57,12 +57,4 @@ th {
     text-align: left;
     color:#008CBA;
 }
-/*
-.List table th{
-    text-align: left;
-    font-size: 30px;
-    color:#008CBA;
-}
-.List table tr{
-    padding: 10px;   
-}*/
+

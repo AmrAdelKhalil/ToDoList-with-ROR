@@ -8,6 +8,7 @@
     </head>
     
     <body>
+        <%=link_to("Home",{:controller => "home",:action => "welcome"}, {:class => "logout"})%>
         <div class = "loginForm">
             <%= form_for(:user, :url =>{:action => 'show'})do |f| %>
             
@@ -25,7 +26,9 @@
                     <th>
                         Passowrd:
                     </th>
-                    <td><%=f.text_field(:password) %>                    
+                    <td>
+<!--                        <%=f.text_field(:password) %>                    -->
+                        <%=f.password_field(:password) %>
                     </td>
                 </tr>
             
