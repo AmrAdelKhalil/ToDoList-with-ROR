@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <%= stylesheet_link_tag('application', :media =>'all') %>
+    <body>
+        
+        <div class = "regForm">
+            <%= form_for(:user, :url =>{:action => 'create'})do |f| %>
+            
+            <table>
+            
+                <tr>
+                    <th>
+                        First Name:
+                    </th>
+                    <td class="temp">
+                        <%=f.text_field(:first_name) %>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        Second Name:
+                    </th>
+                    <td><%=f.text_field(:second_name) %>                    
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        Email:
+                    </th>
+                    <td><%=f.text_field(:email) %>                    
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>
+                        Passowrd:
+                    </th>
+                    <td><%=f.text_field(:password) %>                    
+                    </td>
+                </tr>
+            
+            </table>
+                
+            <div class="btnSubmit">
+                <%= submit_tag("Register") %>
+            </div>
+            
+            <% end %>
+        </div>
+        
+    </body>
+</html>

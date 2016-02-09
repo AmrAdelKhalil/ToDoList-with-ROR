@@ -21,6 +21,7 @@ body{
 #Main h1{
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+/*
 #Main input[name="register"]{
     margin-top: 20px;
     font-size: 50px;
@@ -32,7 +33,20 @@ body{
     font-family: serif;
     transition-duration: 1s;
 }
-#Main input[name="register"]:hover{
+*/
+.register{
+    margin-top: 20px;
+    font-size: 75px;
+    padding: 15px 32px;
+    border-radius: 12px;
+    color: #008CBA;
+    background-color: transparent;
+    border: 4px solid #008CBA;
+    font-family: serif;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+.register:hover{
     background-color: orangered;
     transition-duration: 1s;
     color: #ffffff;
@@ -40,11 +54,12 @@ body{
 #Main input[name="login"]{
     background-color: transparent;
     font-size: 21px;
-    margin-top: 0px;
+    margin-top: 20px;
     border: none;
     text-decoration: underline;
     font-family: serif;
     color: #008CBA;
+/*    position: relative;*/
 }
 #Main input[name="login"]:hover{
     color: #ffffff;
