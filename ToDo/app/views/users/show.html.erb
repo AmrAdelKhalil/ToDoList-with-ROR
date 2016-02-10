@@ -21,15 +21,22 @@
                     <th>My ToDo List</th>
                 </tr>
                 
+                <% @user.notes.each do |note| %>
                 <tr>
-                    <td>here is the content</td>
+                    <td><%=note.note%></td>
                     <td>
                         <form>
-                            <input type="radio"/>Done
+                            <%if note.is_done %>
+                            <%= radio_button_tag(:Done, "OK",checked = true) %>
+                            <%= label_tag(:Done_one, "It is Done") %> 
+                            <%else%>
+                            <%= radio_button_tag(:Not_Done, "Not_OK",checked = false) %>
+                            <%= label_tag(:Not_Done_one, "It is Not Done") %> 
+                            <%end%>
                         </form>
                     </td>
                 </tr>
-                
+                <% end %>
             </table>
         
         </div>
