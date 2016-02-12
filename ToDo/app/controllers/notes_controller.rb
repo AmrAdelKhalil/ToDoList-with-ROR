@@ -25,5 +25,8 @@ class NotesController < ApplicationController
   end
 
   def delete
+      @note = Note.find(params[:note_id])
+      @note.destroy
+      redirect_to({:controller => "users", :action => "show", :user_id => params[:user_id]})
   end
 end
