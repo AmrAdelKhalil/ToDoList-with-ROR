@@ -45,3 +45,22 @@ div input[name="user[first_name]"],input[name="user[second_name]"],input[name="u
     font-size: 30px;
     border-radius: 5px;
 }
+
+.New_Note{
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.btnSubmitNote{
+/*    padding: 10px;*/
+}
+.btnSubmitNote input{
+    width: 50%; 
+    height: 25%;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-top: 0;
+}

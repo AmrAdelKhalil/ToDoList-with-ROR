@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>New Note Page</title>
+        <%= stylesheet_link_tag('application', :media =>'all') %>
+    </head>
+
+    <body>
+        <%=link_to("Back to Account",{:controller => "users", :action => "show", :user_id => @user.id }, {:class => "logout"})%>
+        
+        <div class="regForm">
+           
+            <%= form_for(:note, :url =>{:action => 'add',:user_id => @user.id})do |f| %>
+            
+                <%= f.text_area("post", "cols" => 40, "rows" => 15, "class" => 'New_Note') %>
+
+                <div class="btnSubmitNote">
+                    <%= submit_tag("Add")%>
+                </div>
+            
+            <% end %>
+            
+            
+        </div>
+    </body>
+
+</html>

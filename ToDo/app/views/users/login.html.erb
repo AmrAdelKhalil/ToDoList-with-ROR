@@ -10,7 +10,7 @@
     <body>
         <%=link_to("Home",{:controller => "home",:action => "welcome"}, {:class => "logout"})%>
         <div class = "loginForm">
-            <%= form_for(:user, :url =>{:action => 'show'})do |f| %>
+            <%= form_for(:user, :url =>{:action => 'checkUser'})do |f| %>
             
             <table>
                 

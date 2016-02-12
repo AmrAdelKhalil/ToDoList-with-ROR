@@ -14,6 +14,9 @@
             <%=link_to("Logout",{:action => "login"}, {:class => "logout"})%>
         </div>
         
+        <!--   add note    -->
+        <%=link_to("Add Note to List",{:controller => "notes", :action => "new",:user_id => @user.id}, {:class => "newNote"})%>
+        
         <div class="List">
             
             <table>
@@ -25,15 +28,19 @@
                 <tr>
                     <td><%=note.note%></td>
                     <td>
-                        <form>
+<!--                        <form>-->
                             <%if note.is_done %>
-                            <%= radio_button_tag(:Done, "OK",checked = true) %>
-                            <%= label_tag(:Done_one, "It is Done") %> 
+<!--                            <%= radio_button_tag(:Done, "OK",checked = true) %>-->
+                            <%= label_tag(:Done_one, "Done") %> 
                             <%else%>
-                            <%= radio_button_tag(:Not_Done, "Not_OK",checked = false) %>
-                            <%= label_tag(:Not_Done_one, "It is Not Done") %> 
+<!--                            <%= radio_button_tag(:Not_Done, "Not_OK",checked = false) %>-->
+                            <%= label_tag(:Not_Done_one, "Not Done") %> 
                             <%end%>
-                        </form>
+<!--                        </form>-->
+                    </td>
+                    <td>
+            <%= button_to("edit",{:controller => "notes", :action => "edit", :note_id => note.id, :user_id => @user.id},:class => "editButton") %>
+            <%= button_to("remove",{:controller => "notes", :action => "delete", :note_id => note.id,:user_id => @user.id},:class => "remButton") %>
                     </td>
                 </tr>
                 <% end %>

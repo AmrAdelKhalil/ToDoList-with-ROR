@@ -9,14 +9,18 @@ class UsersController < ApplicationController
    end
 
    def show
-       @user = User.find_by_email(params[:user][:email])
+       @user =User.find(params[:user_id])
+   end
+    
+    def checkUser
+        @user = User.find_by_email(params[:user][:email])
        
        if @user && @user.password ==params[:user][:password]
-#           doNoThing
+           redirect_to(:action => "show", :user_id => @user.id)
        else
            redirect_to(:action => 'login')
        end
-   end
+    end
 
    def new
 #      @user=User.new({:first_name => "Ex.Amr",:second_name => "Ex.Adel", :email => "blabla@bla.com"})

@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+#  get 'notes/index'
+#
+#  get 'notes/new'
+#
+#  get 'notes/edit'
+#
+#  get 'notes/delete'
+
 #  get 'users/index'
 #
 #  get 'users/show'
