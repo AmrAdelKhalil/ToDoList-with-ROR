@@ -22,7 +22,20 @@ class NotesController < ApplicationController
     end
 
   def edit
+      @user= User.find (params[:user_id])
+      @note= Note.find (params[:note_id])
   end
+    
+    def update
+        @note=Note.find(params[:note_id])
+       
+        if @note.update_attributes(:note => params[:note][:note], :is_done => params[:note][:is_done])
+            redirect_to({:controller => "users",:action => "show", :user_id => params[:user_id]})
+        else
+            render("edit")
+        end
+        
+    end
 
   def delete
       @note = Note.find(params[:note_id])
