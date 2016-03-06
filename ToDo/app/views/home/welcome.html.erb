@@ -10,6 +10,11 @@
         <div id="Main">
             <h1>Welcome to ToDoList website</h1>
 <!--            <input type="button" value="Register Now" name="register" >-->
+            <!--    link_to is an button, have Register on it, when i press the botton
+                    it calls action new inside the users controller,
+                    the button has class register, you can see this in inspect element
+            -->
+
             <%=link_to("Register",{:controller => 'users',:action => 'new'}, {:class => "register"}) %>
             <br>
 <!--            <input type="button" value="already have account, login now" name="login">-->

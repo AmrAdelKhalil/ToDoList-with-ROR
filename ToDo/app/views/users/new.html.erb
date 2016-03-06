@@ -2,10 +2,16 @@
 <html>
     <head>
         <title>Registration Page</title>
+        <!-- connect CSS style sheets -->
         <%= stylesheet_link_tag('application', :media =>'all') %>
     <body>
         <%=link_to("Home",{:controller => "home",:action => "welcome"}, {:class => "logout"})%>
         <div class = "regForm">
+            <!--:user is the name of the form, you can see that i used param[:user][*attribute here]
+
+                when you submit a form gonna call (create action) in the same controller which
+                
+                is users controller-->
             <%= form_for(:user, :url =>{:action => 'create'})do |f| %>
             
             <table id="rtable">
